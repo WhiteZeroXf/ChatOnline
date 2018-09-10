@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="apple-touch-fullscreen" content="YES"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>我是首页</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/buttons.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+
+    <!-- js files -->
+    <script src="js/lib.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/action.js"></script>
+    <!--<link rel="import" href="resources.html">-->
+</head>
+
+<body>
+<div>我是导航栏</div>
+<hr/>
+<!-- 首页 start -->
+<div id="index" class="page nav">
+    <button onclick="jump('#chat-index')">聊天室</button>
+    <button onclick="jump('#upload-index')">文件上传</button>
+</div>
+<!-- 首页 end-->
+<!-- 聊天室首页 start -->
+<div id="chat-index" class="page">
+    <button onclick="jump('#index')">返回</button>
+    <hr/>
+    <label>
+        当前在线：
+        <select id="userList">
+            <option></option>
+        </select>
+    </label>
+    <hr/>
+    <label for="message"></label>
+    <input type="text" name="message" id="message"/>
+    <button id="send">发送</button>
+    <hr/>
+</div>
+<!-- 聊天室首页 end -->
+<!-- 文件上传页面 start -->
+<div id="upload-index" class="page">
+    <a onclick="jump('#index')">返回</a>
+    <hr/>
+    <form enctype="multipart/form-data" method="post" id='fileinfo' onsubmit="return false">
+
+        <label for="name">用户名：</label>
+        <input type="text" name="name" id="name"/>
+
+        <br/>
+
+        <label for="pwd">密码：</label>
+        <input id="pwd" type="text" name="pwd"/>
+
+        <br/>
+        <label for="file">上传文件：</label>
+
+        <button class="button button-highlight file">
+            选择文件
+            <input type="file" name="file" multiple="multiple" id="file"/>
+        </button>
+
+
+        <hr/>
+        <button id="onsub">上传</button>
+    </form>
+</div>
+<!-- 文件上传页面 end -->
+
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

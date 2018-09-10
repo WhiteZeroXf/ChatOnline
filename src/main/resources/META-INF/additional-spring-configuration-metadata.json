@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "file.static.location",
+      "type": "java.lang.String",
+      "description": "外部静态文件资源目录."
+  }
+] }
